@@ -9,6 +9,7 @@ import teachRouter from "./route/teacher/teacher.route";
 import cors from "cors";
 import lessonRouter from "./route/teacher/courses/lesson/lesson.route";
 import courseChapterRouter from "./route/teacher/courses/chatpters/chapter.route";
+import stuentRouter from "./route/student/institute/student-institute-route";
 
 
 const app = express();
@@ -33,5 +34,9 @@ app.use("/api/institute/teacher", teacherRouter)
 app.use("/api/teacher", teachRouter);
 app.use("/api/teacher/course",courseChapterRouter)
 app.use("/api/teacher/course/",lessonRouter)
+
+
+//student
+app.use("/api/student/",stuentRouter)
 
 export default app;
